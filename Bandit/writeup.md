@@ -44,3 +44,33 @@ credential: bandit3:MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 bandit3@bandit:~$ cat inhere/...Hiding-From-You 
 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 ```
+
+## Level3 -> Level 4
+credential: bandit4:2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+```bash
+┌──(kali㉿kali)-[~]
+└─$ ssh bandit4@bandit.labs.overthewire.org -p 2220
+bandit4@bandit:~/inhere$ file ./*
+./-file00: data
+./-file01: data
+./-file02: data
+./-file03: DOS executable (COM), start instruction 0x8c887e10 c3ee96c9
+./-file04: data
+./-file05: data
+./-file06: data
+./-file07: ASCII text
+./-file08: data
+./-file09: data
+bandit4@bandit:~/inhere$ cat ./-file07
+4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+```
+## Level4 -> Level5 
+credential: bandit5:4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+```bash
+┌──(kali㉿kali)-[~]
+└─$ ssh bandit5@bandit.labs.overthewire.org -p 2220
+bandit5@bandit:~/inhere$ find . -type f -size 1033c
+./maybehere07/.file2
+bandit5@bandit:~/inhere$ cat ./maybehere07/.file2
+HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+```
